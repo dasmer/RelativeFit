@@ -17,6 +17,10 @@
 		2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */; };
 		2FB3AF4A1AAFED5500A1F099 /* FITPedometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3AF491AAFED5500A1F099 /* FITPedometer.m */; };
 		2FB3AF501AAFFE6200A1F099 /* FITPedometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3AF4F1AAFFE6200A1F099 /* FITPedometerData.m */; };
+		6187D0FA1AB097890002BD41 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
+		6187D1001AB097890002BD41 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6187D0FF1AB097890002BD41 /* TodayViewController.m */; };
+		6187D1021AB097890002BD41 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6187D1011AB097890002BD41 /* MainInterface.storyboard */; };
+		6187D1051AB097890002BD41 /* FitToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6187D0F81AB097890002BD41 /* FitToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +31,28 @@
 			remoteGlobalIDString = 2F1160B81AAFD69500415967;
 			remoteInfo = RelativeFit;
 		};
+		6187D1031AB097890002BD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F1160B11AAFD69400415967 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6187D0F71AB097890002BD41;
+			remoteInfo = FitToday;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6187D1091AB097890002BD41 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6187D1051AB097890002BD41 /* FitToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		123E5EF181AF2F73AAF395A7 /* libPods-RelativeFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelativeFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +73,12 @@
 		2FB3AF491AAFED5500A1F099 /* FITPedometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPedometer.m; sourceTree = "<group>"; };
 		2FB3AF4E1AAFFE6200A1F099 /* FITPedometerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPedometerData.h; sourceTree = "<group>"; };
 		2FB3AF4F1AAFFE6200A1F099 /* FITPedometerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPedometerData.m; sourceTree = "<group>"; };
+		6187D0F81AB097890002BD41 /* FitToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FitToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6187D0F91AB097890002BD41 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6187D0FD1AB097890002BD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6187D0FE1AB097890002BD41 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		6187D0FF1AB097890002BD41 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		6187D1011AB097890002BD41 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		E103AA386B0A8EA187280C9B /* Pods-RelativeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +99,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6187D0F51AB097890002BD41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6187D0FA1AB097890002BD41 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +115,7 @@
 			children = (
 				2F1160BB1AAFD69500415967 /* RelativeFit */,
 				2F1160D51AAFD69500415967 /* RelativeFitTests */,
+				6187D0FB1AB097890002BD41 /* FitToday */,
 				2F1160BA1AAFD69500415967 /* Products */,
 				B96F0DF398FFAA91FC38BA65 /* Pods */,
 				5E09382A3DE4AAF97E80AA68 /* Frameworks */,
@@ -87,6 +127,7 @@
 			children = (
 				2F1160B91AAFD69500415967 /* RelativeFit.app */,
 				2F1160D21AAFD69500415967 /* RelativeFitTests.xctest */,
+				6187D0F81AB097890002BD41 /* FitToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,8 +181,28 @@
 			isa = PBXGroup;
 			children = (
 				123E5EF181AF2F73AAF395A7 /* libPods-RelativeFit.a */,
+				6187D0F91AB097890002BD41 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6187D0FB1AB097890002BD41 /* FitToday */ = {
+			isa = PBXGroup;
+			children = (
+				6187D0FE1AB097890002BD41 /* TodayViewController.h */,
+				6187D0FF1AB097890002BD41 /* TodayViewController.m */,
+				6187D1011AB097890002BD41 /* MainInterface.storyboard */,
+				6187D0FC1AB097890002BD41 /* Supporting Files */,
+			);
+			path = FitToday;
+			sourceTree = "<group>";
+		};
+		6187D0FC1AB097890002BD41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6187D0FD1AB097890002BD41 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B96F0DF398FFAA91FC38BA65 /* Pods */ = {
@@ -165,10 +226,12 @@
 				2F1160B61AAFD69500415967 /* Frameworks */,
 				2F1160B71AAFD69500415967 /* Resources */,
 				D29C0CA2C05CF8335988688B /* Copy Pods Resources */,
+				6187D1091AB097890002BD41 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6187D1041AB097890002BD41 /* PBXTargetDependency */,
 			);
 			name = RelativeFit;
 			productName = RelativeFit;
@@ -193,6 +256,23 @@
 			productReference = 2F1160D21AAFD69500415967 /* RelativeFitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6187D0F71AB097890002BD41 /* FitToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6187D1081AB097890002BD41 /* Build configuration list for PBXNativeTarget "FitToday" */;
+			buildPhases = (
+				6187D0F41AB097890002BD41 /* Sources */,
+				6187D0F51AB097890002BD41 /* Frameworks */,
+				6187D0F61AB097890002BD41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitToday;
+			productName = FitToday;
+			productReference = 6187D0F81AB097890002BD41 /* FitToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +289,9 @@
 					2F1160D11AAFD69500415967 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 2F1160B81AAFD69500415967;
+					};
+					6187D0F71AB097890002BD41 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -227,6 +310,7 @@
 			targets = (
 				2F1160B81AAFD69500415967 /* RelativeFit */,
 				2F1160D11AAFD69500415967 /* RelativeFitTests */,
+				6187D0F71AB097890002BD41 /* FitToday */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6187D0F61AB097890002BD41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6187D1021AB097890002BD41 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +397,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6187D0F41AB097890002BD41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6187D1001AB097890002BD41 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -312,6 +412,11 @@
 			isa = PBXTargetDependency;
 			target = 2F1160B81AAFD69500415967 /* RelativeFit */;
 			targetProxy = 2F1160D31AAFD69500415967 /* PBXContainerItemProxy */;
+		};
+		6187D1041AB097890002BD41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6187D0F71AB097890002BD41 /* FitToday */;
+			targetProxy = 6187D1031AB097890002BD41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,6 +598,15 @@
 			buildConfigurations = (
 				2F1160E01AAFD69500415967 /* Debug */,
 				2F1160E11AAFD69500415967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6187D1081AB097890002BD41 /* Build configuration list for PBXNativeTarget "FitToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6187D1061AB097890002BD41 /* Debug */,
+				6187D1071AB097890002BD41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
