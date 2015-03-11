@@ -43,29 +43,13 @@
 {
     self.lastYesterdayData = nil;
     self.lastTodayData = nil;
-    [self.pedometer startPedometerUpdatesFromDate:[NSDate mt_startOfYesterday]
-                                      withHandler:^(CMPedometerData *yesterdayPedometerData, NSError *error) {
-                                          if (!error) {
-                                              self.lastYesterdayData = yesterdayPedometerData;
-                                              CMPedometerData *todayPedometerData = self.lastTodayData;
-                                              if (todayPedometerData) {
-                                                  FITPedometerData *updatedData = [[FITPedometerData alloc] initWithYesterdayData:yesterdayPedometerData
-                                                                                                                        todayData:self.lastTodayData];
-                                                  if (self.pedometerDidUpdateBlock) {
-                                                      self.pedometerDidUpdateBlock(updatedData);
-                                                  }
-                                              }
-                                          }
-                                      }];
-
-    NSDate *now = [NSDate date];
-    [self.pedometer queryPedometerDataFromDate:[NSDate mt_startOfToday]
-                                        toDate:now
-                                   withHandler:^(CMPedometerData *todayPedometerData, NSError *error) {
+    [self.pedometer queryPedometerDataFromDate:[NSDate mt_startOfYesterday]
+                                        toDate:[NSDate mt_startOfToday]
+                                   withHandler:^(CMPedometerData *yesterdayPedometerData, NSError *error) {
                                        if (!error) {
-                                           self.lastTodayData = todayPedometerData;
-                                           CMPedometerData *yesterdayPedometerData = self.lastYesterdayData;
-                                           if (yesterdayPedometerData) {
+                                           self.lastYesterdayData = yesterdayPedometerData;
+                                           CMPedometerData *todayPedometerData = self.lastTodayData;
+                                           if (todayPedometerData) {
                                                FITPedometerData *updatedData = [[FITPedometerData alloc] initWithYesterdayData:yesterdayPedometerData
                                                                                                                      todayData:todayPedometerData];
                                                if (self.pedometerDidUpdateBlock) {
@@ -74,6 +58,21 @@
                                            }
                                        }
                                    }];
+
+    [self.pedometer startPedometerUpdatesFromDate:[NSDate mt_startOfToday]
+                                      withHandler:^(CMPedometerData *todayPedometerData, NSError *error) {
+                                          if (!error) {
+                                              self.lastTodayData = todayPedometerData;
+                                              CMPedometerData *yesterdayPedometerData = self.lastYesterdayData;
+                                              if (yesterdayPedometerData) {
+                                                  FITPedometerData *updatedData = [[FITPedometerData alloc] initWithYesterdayData:yesterdayPedometerData
+                                                                                                                        todayData:todayPedometerData];
+                                                  if (self.pedometerDidUpdateBlock) {
+                                                      self.pedometerDidUpdateBlock(updatedData);
+                                                  }
+                                              }
+                                          }
+                                      }];
 }
 
 - (void)stop
