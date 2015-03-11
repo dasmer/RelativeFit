@@ -18,7 +18,7 @@
 		2FB3AF4A1AAFED5500A1F099 /* FITPedometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3AF491AAFED5500A1F099 /* FITPedometer.m */; };
 		2FB3AF501AAFFE6200A1F099 /* FITPedometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3AF4F1AAFFE6200A1F099 /* FITPedometerData.m */; };
 		6187D0FA1AB097890002BD41 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
-		6187D1001AB097890002BD41 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6187D0FF1AB097890002BD41 /* TodayViewController.m */; };
+		6187D1001AB097890002BD41 /* FITTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6187D0FF1AB097890002BD41 /* FITTodayViewController.m */; };
 		6187D1021AB097890002BD41 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6187D1011AB097890002BD41 /* MainInterface.storyboard */; };
 		6187D1051AB097890002BD41 /* FitToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6187D0F81AB097890002BD41 /* FitToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -76,8 +76,8 @@
 		6187D0F81AB097890002BD41 /* FitToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FitToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6187D0F91AB097890002BD41 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6187D0FD1AB097890002BD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6187D0FE1AB097890002BD41 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		6187D0FF1AB097890002BD41 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		6187D0FE1AB097890002BD41 /* FITTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITTodayViewController.h; sourceTree = "<group>"; };
+		6187D0FF1AB097890002BD41 /* FITTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITTodayViewController.m; sourceTree = "<group>"; };
 		6187D1011AB097890002BD41 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		E103AA386B0A8EA187280C9B /* Pods-RelativeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 		6187D0FB1AB097890002BD41 /* FitToday */ = {
 			isa = PBXGroup;
 			children = (
-				6187D0FE1AB097890002BD41 /* TodayViewController.h */,
-				6187D0FF1AB097890002BD41 /* TodayViewController.m */,
+				6187D0FE1AB097890002BD41 /* FITTodayViewController.h */,
+				6187D0FF1AB097890002BD41 /* FITTodayViewController.m */,
 				6187D1011AB097890002BD41 /* MainInterface.storyboard */,
 				6187D0FC1AB097890002BD41 /* Supporting Files */,
 			);
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6187D1001AB097890002BD41 /* TodayViewController.m in Sources */,
+				6187D1001AB097890002BD41 /* FITTodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
