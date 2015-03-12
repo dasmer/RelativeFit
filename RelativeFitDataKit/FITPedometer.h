@@ -3,8 +3,8 @@
 
 @interface FITPedometer : NSObject
 
-- (instancetype)initWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
+- (void)startWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
 
-- (void)start;
+- (void)stop;
 
 @end

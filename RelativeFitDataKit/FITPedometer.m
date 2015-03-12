@@ -16,31 +16,18 @@
 
 @implementation FITPedometer
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (instancetype)initWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock
+- (instancetype)init;
 {
     self = [super init];
     if (self) {
-        _pedometerDidUpdateBlock = pedometerDidUpdateBlock;
         _pedometer = [[CMPedometer alloc] init];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(stop)
-                                                     name:UIApplicationDidEnterBackgroundNotification
-                                                   object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(start)
-                                                     name:UIApplicationWillEnterForegroundNotification
-                                                   object:nil];
     }
     return self;
 }
 
-- (void)start
+- (void)startWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
 {
+    _pedometerDidUpdateBlock = pedometerDidUpdateBlock;
     self.lastYesterdayData = nil;
     self.lastTodayData = nil;
     [self.pedometer queryPedometerDataFromDate:[NSDate mt_startOfYesterday]

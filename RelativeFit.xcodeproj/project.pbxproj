@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FB11F172DBFE5FFE11370C3 /* libPods-RelativeFit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 123E5EF181AF2F73AAF395A7 /* libPods-RelativeFit.a */; };
 		2F1160BF1AAFD69500415967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160BE1AAFD69500415967 /* main.m */; };
 		2F1160C21AAFD69500415967 /* FITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160C11AAFD69500415967 /* FITAppDelegate.m */; };
 		2F1160CA1AAFD69500415967 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160C91AAFD69500415967 /* Images.xcassets */; };
@@ -15,10 +14,11 @@
 		2F1160D91AAFD69500415967 /* RelativeFitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160D81AAFD69500415967 /* RelativeFitTests.m */; };
 		2F1160E31AAFD78D00415967 /* FITDeltaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */; };
 		2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */; };
-		6187D0FA1AB097890002BD41 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
-		6187D1001AB097890002BD41 /* FITTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6187D0FF1AB097890002BD41 /* FITTodayViewController.m */; };
-		6187D1021AB097890002BD41 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6187D1011AB097890002BD41 /* MainInterface.storyboard */; };
-		6187D1051AB097890002BD41 /* FitToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6187D0F81AB097890002BD41 /* FitToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F7C25BF1AB0D4D40014B69F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
+		2F7C25C51AB0D4D40014B69F /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25C41AB0D4D40014B69F /* TodayViewController.m */; };
+		2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */; };
+		2F7C25CA1AB0D4D40014B69F /* TodayFit.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F7C25CE1AB0D57F0014B69F /* RelativeFitDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; };
 		61B70B8A1AB0AADF006BD64F /* RelativeFitDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B70B891AB0AADF006BD64F /* RelativeFitDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B70B901AB0AADF006BD64F /* RelativeFitDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; };
 		61B70B991AB0AADF006BD64F /* RelativeFitDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B981AB0AADF006BD64F /* RelativeFitDataKitTests.m */; };
@@ -39,12 +39,12 @@
 			remoteGlobalIDString = 2F1160B81AAFD69500415967;
 			remoteInfo = RelativeFit;
 		};
-		6187D1031AB097890002BD41 /* PBXContainerItemProxy */ = {
+		2F7C25C81AB0D4D40014B69F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2F1160B11AAFD69400415967 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6187D0F71AB097890002BD41;
-			remoteInfo = FitToday;
+			remoteGlobalIDString = 2F7C25BD1AB0D4D40014B69F;
+			remoteInfo = TodayFit;
 		};
 		61B70B911AB0AADF006BD64F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -76,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6187D1051AB097890002BD41 /* FitToday.appex in Embed App Extensions */,
+				2F7C25CA1AB0D4D40014B69F /* TodayFit.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		123E5EF181AF2F73AAF395A7 /* libPods-RelativeFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelativeFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelativeFitDataKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1160B91AAFD69500415967 /* RelativeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelativeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1160BD1AAFD69500415967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,13 +109,14 @@
 		2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITDeltaViewController.xib; sourceTree = "<group>"; };
 		2F1160E41AAFDAB400415967 /* FITDeltaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDeltaViewController.h; sourceTree = "<group>"; };
 		2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDeltaViewController.m; sourceTree = "<group>"; };
+		2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RelativeFit.entitlements; sourceTree = "<group>"; };
+		2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayFit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7C25C21AB0D4D40014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7C25C31AB0D4D40014B69F /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		2F7C25C41AB0D4D40014B69F /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		42FB647F16DD7BBEAAE4C723 /* Pods-RelativeFitDataKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFitDataKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit.release.xcconfig"; sourceTree = "<group>"; };
-		6187D0F81AB097890002BD41 /* FitToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FitToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6187D0F91AB097890002BD41 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		6187D0FD1AB097890002BD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6187D0FE1AB097890002BD41 /* FITTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITTodayViewController.h; sourceTree = "<group>"; };
-		6187D0FF1AB097890002BD41 /* FITTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITTodayViewController.m; sourceTree = "<group>"; };
-		6187D1011AB097890002BD41 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RelativeFitDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B70B881AB0AADF006BD64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61B70B891AB0AADF006BD64F /* RelativeFitDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelativeFitDataKit.h; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB11F172DBFE5FFE11370C3 /* libPods-RelativeFit.a in Frameworks */,
 				61B70B9C1AB0AADF006BD64F /* RelativeFitDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,11 +148,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6187D0F51AB097890002BD41 /* Frameworks */ = {
+		2F7C25BB1AB0D4D40014B69F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6187D0FA1AB097890002BD41 /* NotificationCenter.framework in Frameworks */,
+				2F7C25CE1AB0D57F0014B69F /* RelativeFitDataKit.framework in Frameworks */,
+				2F7C25BF1AB0D4D40014B69F /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +181,9 @@
 			children = (
 				2F1160BB1AAFD69500415967 /* RelativeFit */,
 				2F1160D51AAFD69500415967 /* RelativeFitTests */,
-				6187D0FB1AB097890002BD41 /* FitToday */,
 				61B70B861AB0AADF006BD64F /* RelativeFitDataKit */,
 				61B70B951AB0AADF006BD64F /* RelativeFitDataKitTests */,
+				2F7C25C01AB0D4D40014B69F /* TodayFit */,
 				2F1160BA1AAFD69500415967 /* Products */,
 				B96F0DF398FFAA91FC38BA65 /* Pods */,
 				5E09382A3DE4AAF97E80AA68 /* Frameworks */,
@@ -195,9 +195,9 @@
 			children = (
 				2F1160B91AAFD69500415967 /* RelativeFit.app */,
 				2F1160D21AAFD69500415967 /* RelativeFitTests.xctest */,
-				6187D0F81AB097890002BD41 /* FitToday.appex */,
 				61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */,
 				61B70B8F1AB0AADF006BD64F /* RelativeFitDataKitTests.xctest */,
+				2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +205,7 @@
 		2F1160BB1AAFD69500415967 /* RelativeFit */ = {
 			isa = PBXGroup;
 			children = (
+				2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */,
 				2F1160C01AAFD69500415967 /* FITAppDelegate.h */,
 				2F1160C11AAFD69500415967 /* FITAppDelegate.m */,
 				2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */,
@@ -243,33 +244,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2F7C25C01AB0D4D40014B69F /* TodayFit */ = {
+			isa = PBXGroup;
+			children = (
+				2F7C25C31AB0D4D40014B69F /* TodayViewController.h */,
+				2F7C25C41AB0D4D40014B69F /* TodayViewController.m */,
+				2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */,
+				2F7C25C11AB0D4D40014B69F /* Supporting Files */,
+			);
+			path = TodayFit;
+			sourceTree = "<group>";
+		};
+		2F7C25C11AB0D4D40014B69F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F7C25C21AB0D4D40014B69F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5E09382A3DE4AAF97E80AA68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				123E5EF181AF2F73AAF395A7 /* libPods-RelativeFit.a */,
 				6187D0F91AB097890002BD41 /* NotificationCenter.framework */,
 				1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6187D0FB1AB097890002BD41 /* FitToday */ = {
-			isa = PBXGroup;
-			children = (
-				6187D0FE1AB097890002BD41 /* FITTodayViewController.h */,
-				6187D0FF1AB097890002BD41 /* FITTodayViewController.m */,
-				6187D1011AB097890002BD41 /* MainInterface.storyboard */,
-				6187D0FC1AB097890002BD41 /* Supporting Files */,
-			);
-			path = FitToday;
-			sourceTree = "<group>";
-		};
-		6187D0FC1AB097890002BD41 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6187D0FD1AB097890002BD41 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		61B70B861AB0AADF006BD64F /* RelativeFitDataKit */ = {
@@ -350,8 +350,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				6187D1041AB097890002BD41 /* PBXTargetDependency */,
 				61B70B9B1AB0AADF006BD64F /* PBXTargetDependency */,
+				2F7C25C91AB0D4D40014B69F /* PBXTargetDependency */,
 			);
 			name = RelativeFit;
 			productName = RelativeFit;
@@ -376,21 +376,21 @@
 			productReference = 2F1160D21AAFD69500415967 /* RelativeFitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6187D0F71AB097890002BD41 /* FitToday */ = {
+		2F7C25BD1AB0D4D40014B69F /* TodayFit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6187D1081AB097890002BD41 /* Build configuration list for PBXNativeTarget "FitToday" */;
+			buildConfigurationList = 2F7C25CB1AB0D4D40014B69F /* Build configuration list for PBXNativeTarget "TodayFit" */;
 			buildPhases = (
-				6187D0F41AB097890002BD41 /* Sources */,
-				6187D0F51AB097890002BD41 /* Frameworks */,
-				6187D0F61AB097890002BD41 /* Resources */,
+				2F7C25BA1AB0D4D40014B69F /* Sources */,
+				2F7C25BB1AB0D4D40014B69F /* Frameworks */,
+				2F7C25BC1AB0D4D40014B69F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FitToday;
-			productName = FitToday;
-			productReference = 6187D0F81AB097890002BD41 /* FitToday.appex */;
+			name = TodayFit;
+			productName = TodayFit;
+			productReference = 2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		61B70B841AB0AADF006BD64F /* RelativeFitDataKit */ = {
@@ -444,16 +444,24 @@
 				TargetAttributes = {
 					2F1160B81AAFD69500415967 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 63259B266M;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2F1160D11AAFD69500415967 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 2F1160B81AAFD69500415967;
 					};
-					6187D0F71AB097890002BD41 = {
-						CreatedOnToolsVersion = 6.1.1;
+					2F7C25BD1AB0D4D40014B69F = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 63259B266M;
 					};
 					61B70B841AB0AADF006BD64F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 63259B266M;
 					};
 					61B70B8E1AB0AADF006BD64F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -476,9 +484,9 @@
 			targets = (
 				2F1160B81AAFD69500415967 /* RelativeFit */,
 				2F1160D11AAFD69500415967 /* RelativeFitTests */,
-				6187D0F71AB097890002BD41 /* FitToday */,
 				61B70B841AB0AADF006BD64F /* RelativeFitDataKit */,
 				61B70B8E1AB0AADF006BD64F /* RelativeFitDataKitTests */,
+				2F7C25BD1AB0D4D40014B69F /* TodayFit */,
 			);
 		};
 /* End PBXProject section */
@@ -501,11 +509,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6187D0F61AB097890002BD41 /* Resources */ = {
+		2F7C25BC1AB0D4D40014B69F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6187D1021AB097890002BD41 /* MainInterface.storyboard in Resources */,
+				2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,11 +585,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6187D0F41AB097890002BD41 /* Sources */ = {
+		2F7C25BA1AB0D4D40014B69F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6187D1001AB097890002BD41 /* FITTodayViewController.m in Sources */,
+				2F7C25C51AB0D4D40014B69F /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,10 +618,10 @@
 			target = 2F1160B81AAFD69500415967 /* RelativeFit */;
 			targetProxy = 2F1160D31AAFD69500415967 /* PBXContainerItemProxy */;
 		};
-		6187D1041AB097890002BD41 /* PBXTargetDependency */ = {
+		2F7C25C91AB0D4D40014B69F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6187D0F71AB097890002BD41 /* FitToday */;
-			targetProxy = 6187D1031AB097890002BD41 /* PBXContainerItemProxy */;
+			target = 2F7C25BD1AB0D4D40014B69F /* TodayFit */;
+			targetProxy = 2F7C25C81AB0D4D40014B69F /* PBXContainerItemProxy */;
 		};
 		61B70B921AB0AADF006BD64F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -726,12 +734,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RelativeFit/RelativeFit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = RelativeFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -739,12 +751,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RelativeFit/RelativeFit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = RelativeFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -782,25 +798,34 @@
 			};
 			name = Release;
 		};
-		61B70B9E1AB0AADF006BD64F /* Debug */ = {
+		2F7C25CC1AB0D4D40014B69F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = FitToday;
-				PROVISIONING_PROFILE = "297b4b1f-4f5f-4ecf-9db5-57f8be748bba";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		61B70B9F1AB0AADF006BD64F /* Release */ = {
+		2F7C25CD1AB0D4D40014B69F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dasmer Singh (Q28TN657FZ)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = FitToday;
-				PROVISIONING_PROFILE = "297b4b1f-4f5f-4ecf-9db5-57f8be748bba";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = TodayFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -809,6 +834,8 @@
 			baseConfigurationReference = 763A03031435C7F95536B284 /* Pods-RelativeFitDataKit.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -822,7 +849,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "297b4b1f-4f5f-4ecf-9db5-57f8be748bba";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -834,6 +861,8 @@
 			baseConfigurationReference = 42FB647F16DD7BBEAAE4C723 /* Pods-RelativeFitDataKit.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -843,7 +872,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "297b4b1f-4f5f-4ecf-9db5-57f8be748bba";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -912,14 +941,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6187D1081AB097890002BD41 /* Build configuration list for PBXNativeTarget "FitToday" */ = {
+		2F7C25CB1AB0D4D40014B69F /* Build configuration list for PBXNativeTarget "TodayFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61B70B9E1AB0AADF006BD64F /* Debug */,
-				61B70B9F1AB0AADF006BD64F /* Release */,
+				2F7C25CC1AB0D4D40014B69F /* Debug */,
+				2F7C25CD1AB0D4D40014B69F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		61B70BA41AB0AADF006BD64F /* Build configuration list for PBXNativeTarget "RelativeFitDataKit" */ = {
 			isa = XCConfigurationList;
