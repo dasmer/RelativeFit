@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Columbia University. All rights reserved.
 //
 
-#import "TodayViewController.h"
+#import "FITTodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @import RelativeFitDataKit;
 
-@interface TodayViewController () <NCWidgetProviding>
+@interface FITTodayViewController () <NCWidgetProviding>
 
 @property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation TodayViewController
+@implementation FITTodayViewController
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

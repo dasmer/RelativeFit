@@ -15,7 +15,7 @@
 		2F1160E31AAFD78D00415967 /* FITDeltaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */; };
 		2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */; };
 		2F7C25BF1AB0D4D40014B69F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
-		2F7C25C51AB0D4D40014B69F /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25C41AB0D4D40014B69F /* TodayViewController.m */; };
+		2F7C25C51AB0D4D40014B69F /* FITTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25C41AB0D4D40014B69F /* FITTodayViewController.m */; };
 		2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */; };
 		2F7C25CA1AB0D4D40014B69F /* TodayFit.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2F7C25CE1AB0D57F0014B69F /* RelativeFitDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; };
@@ -112,8 +112,8 @@
 		2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RelativeFit.entitlements; sourceTree = "<group>"; };
 		2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayFit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C25C21AB0D4D40014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F7C25C31AB0D4D40014B69F /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		2F7C25C41AB0D4D40014B69F /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		2F7C25C31AB0D4D40014B69F /* FITTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITTodayViewController.h; sourceTree = "<group>"; };
+		2F7C25C41AB0D4D40014B69F /* FITTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITTodayViewController.m; sourceTree = "<group>"; };
 		2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		42FB647F16DD7BBEAAE4C723 /* Pods-RelativeFitDataKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFitDataKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit.release.xcconfig"; sourceTree = "<group>"; };
 		6187D0F91AB097890002BD41 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -247,8 +247,8 @@
 		2F7C25C01AB0D4D40014B69F /* TodayFit */ = {
 			isa = PBXGroup;
 			children = (
-				2F7C25C31AB0D4D40014B69F /* TodayViewController.h */,
-				2F7C25C41AB0D4D40014B69F /* TodayViewController.m */,
+				2F7C25C31AB0D4D40014B69F /* FITTodayViewController.h */,
+				2F7C25C41AB0D4D40014B69F /* FITTodayViewController.m */,
 				2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */,
 				2F7C25C11AB0D4D40014B69F /* Supporting Files */,
 			);
@@ -589,7 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7C25C51AB0D4D40014B69F /* TodayViewController.m in Sources */,
+				2F7C25C51AB0D4D40014B69F /* FITTodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
