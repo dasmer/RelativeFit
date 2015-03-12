@@ -1,11 +1,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface RelativeFitTests : XCTestCase
+@interface RelativeFitDataKitTests : XCTestCase
 
 @end
 
-@implementation RelativeFitTests
+@implementation RelativeFitDataKitTests
 
 - (void)setUp {
     [super setUp];
