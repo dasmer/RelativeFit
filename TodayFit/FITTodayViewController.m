@@ -1,11 +1,3 @@
-//
-//  TodayViewController.m
-//  TodayFit
-//
-//  Created by dasmer on 3/11/15.
-//  Copyright (c) 2015 Columbia University. All rights reserved.
-//
-
 #import "FITTodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 

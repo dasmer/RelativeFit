@@ -1,11 +1,3 @@
-//
-//  RelativeFitTests.m
-//  RelativeFitTests
-//
-//  Created by dasmer on 3/10/15.
-//  Copyright (c) 2015 Columbia University. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
