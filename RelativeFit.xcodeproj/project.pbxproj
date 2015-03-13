@@ -19,7 +19,7 @@
 		2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */; };
 		2F7C25CA1AB0D4D40014B69F /* TodayFit.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2F7C25CE1AB0D57F0014B69F /* RelativeFitDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; };
-		2F7C25D91AB224650014B69F /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25D81AB224650014B69F /* InterfaceController.m */; };
+		2F7C25D91AB224650014B69F /* FITDeltaInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25D81AB224650014B69F /* FITDeltaInterfaceController.m */; };
 		2F7C25DB1AB224650014B69F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25DA1AB224650014B69F /* Images.xcassets */; };
 		2F7C25DF1AB224650014B69F /* RelativeFit WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25DE1AB224650014B69F /* RelativeFit WatchKit App.app */; };
 		2F7C25E71AB224650014B69F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25E51AB224650014B69F /* Interface.storyboard */; };
@@ -138,8 +138,8 @@
 		2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		2F7C25D31AB224650014B69F /* RelativeFit WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RelativeFit WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C25D61AB224650014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F7C25D71AB224650014B69F /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		2F7C25D81AB224650014B69F /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		2F7C25D71AB224650014B69F /* FITDeltaInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITDeltaInterfaceController.h; sourceTree = "<group>"; };
+		2F7C25D81AB224650014B69F /* FITDeltaInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITDeltaInterfaceController.m; sourceTree = "<group>"; };
 		2F7C25DA1AB224650014B69F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F7C25DE1AB224650014B69F /* RelativeFit WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RelativeFit WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C25E41AB224650014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -307,8 +307,8 @@
 		2F7C25D41AB224650014B69F /* RelativeFit WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2F7C25D71AB224650014B69F /* InterfaceController.h */,
-				2F7C25D81AB224650014B69F /* InterfaceController.m */,
+				2F7C25D71AB224650014B69F /* FITDeltaInterfaceController.h */,
+				2F7C25D81AB224650014B69F /* FITDeltaInterfaceController.m */,
 				2F7C25DA1AB224650014B69F /* Images.xcassets */,
 				2F7C25D51AB224650014B69F /* Supporting Files */,
 			);
@@ -736,7 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7C25D91AB224650014B69F /* InterfaceController.m in Sources */,
+				2F7C25D91AB224650014B69F /* FITDeltaInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,6 +1186,7 @@
 				2F7C25F01AB224650014B69F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F7C25F21AB224650014B69F /* Build configuration list for PBXNativeTarget "RelativeFit WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1194,6 +1195,7 @@
 				2F7C25EE1AB224650014B69F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61B70BA41AB0AADF006BD64F /* Build configuration list for PBXNativeTarget "RelativeFitDataKit" */ = {
 			isa = XCConfigurationList;

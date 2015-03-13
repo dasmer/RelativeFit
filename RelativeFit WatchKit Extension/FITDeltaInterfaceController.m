@@ -1,8 +1,8 @@
-#import "InterfaceController.h"
+#import "FITDeltaInterfaceController.h"
 
 @import RelativeFitDataKit;
 
-@interface InterfaceController()
+@interface FITDeltaInterfaceController()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *stepsLabel;
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *metersLabel;
@@ -13,7 +13,7 @@
 @end
 
 
-@implementation InterfaceController
+@implementation FITDeltaInterfaceController
 
 - (instancetype)init
 {
