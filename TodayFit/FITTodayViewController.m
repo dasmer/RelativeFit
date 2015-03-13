@@ -58,4 +58,11 @@
     }];
 }
 
+
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
+{
+    margins.bottom = 0;
+    return margins;
+}
+
 @end

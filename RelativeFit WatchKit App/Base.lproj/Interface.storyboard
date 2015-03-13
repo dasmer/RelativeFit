@@ -10,10 +10,24 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label alignment="left" text="δ Steps" id="3qm-8M-C44"/>
-                        <label alignment="left" text="δ Meters" id="IoJ-gx-U4F"/>
-                        <label alignment="left" text="δ Floors" id="NpK-Kj-3IM"/>
+                        <label alignment="left" text="δ Steps" id="3qm-8M-C44">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="right" text="0000" id="rC9-1H-4jH"/>
+                        <label alignment="left" text="δ Meters" id="IoJ-gx-U4F">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="right" text="0000" id="Ng3-wM-L7P"/>
+                        <label alignment="left" text="δ Floors" id="NpK-Kj-3IM">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="right" text="0000" id="FXF-bb-fng"/>
                     </items>
+                    <connections>
+                        <outlet property="floorsLabel" destination="FXF-bb-fng" id="937-o3-RxD"/>
+                        <outlet property="metersLabel" destination="Ng3-wM-L7P" id="XU4-if-YZP"/>
+                        <outlet property="stepsLabel" destination="rC9-1H-4jH" id="dhs-hx-Ks0"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>

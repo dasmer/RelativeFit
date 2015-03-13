@@ -1,34 +1,52 @@
-//
-//  InterfaceController.m
-//  RelativeFit WatchKit Extension
-//
-//  Created by dasmer on 3/12/15.
-//  Copyright (c) 2015 Columbia University. All rights reserved.
-//
-
 #import "InterfaceController.h"
 
+@import RelativeFitDataKit;
 
 @interface InterfaceController()
+
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *stepsLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *metersLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *floorsLabel;
+
+@property (strong, nonatomic) FITPedometer *pedometer;
 
 @end
 
 
 @implementation InterfaceController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _pedometer = [[FITPedometer alloc] init];
+    }
+    return self;
+}
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
-    // Configure interface objects here.
 }
 
 - (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    __weak typeof (self) weakSelf = self;
+    [self.pedometer startWithDidUpdateBlock:^(FITPedometerData *pedometerData) {
+        __strong typeof (self) strongSelf = weakSelf;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *stepsString = [@([pedometerData.numberOfStepsDelta integerValue]) stringValue];
+            NSString *distanceString = [@([pedometerData.numberOfMetersDelta integerValue]) stringValue];
+            NSString *floorsString = [@([pedometerData.numberOfFloorsDelta integerValue]) stringValue];
+
+            [strongSelf.stepsLabel setText:stepsString];
+            [strongSelf.metersLabel setText:distanceString];
+            [strongSelf.floorsLabel setText:floorsString];
+        });
+    }];
 }
 
 - (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
+    [self.pedometer stop];
     [super didDeactivate];
 }
 
