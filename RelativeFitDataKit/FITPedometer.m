@@ -27,6 +27,14 @@
 
 - (void)startWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
 {
+#if TARGET_IPHONE_SIMULATOR
+    if (pedometerDidUpdateBlock) {
+        FITPedometerData *emptyData = [[FITPedometerData alloc] init];
+        pedometerDidUpdateBlock(emptyData);
+    }
+    return;
+#pragma GCC diagnostic ignored "-Wunreachable-code"
+#endif
     _pedometerDidUpdateBlock = pedometerDidUpdateBlock;
     self.lastYesterdayData = nil;
     self.lastTodayData = nil;
