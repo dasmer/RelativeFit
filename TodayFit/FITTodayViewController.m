@@ -35,12 +35,12 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
     __weak typeof (self) weakSelf = self;
-    [self.pedometer startWithDidUpdateBlock:^(FITPedometerData *pedometerData) {
+    [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __strong typeof (self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *stepsString = [@([pedometerData.numberOfStepsDelta integerValue]) stringValue];
-            NSString *distanceString = [@([pedometerData.numberOfMetersDelta integerValue]) stringValue];
-            NSString *floorsString = [@([pedometerData.numberOfFloorsDelta integerValue]) stringValue];
+            NSString *stepsString = [@(pedometerData.numberOfStepsDelta) stringValue];
+            NSString *distanceString = [@(pedometerData.numberOfMetersDelta) stringValue];
+            NSString *floorsString = [@(pedometerData.numberOfFloorsDelta) stringValue];
             if (![strongSelf.stepsLabel.text isEqualToString:stepsString]
                 || ![strongSelf.distanceLabel.text isEqualToString:distanceString]
                 || ![strongSelf.floorsLabel.text isEqualToString:floorsString]) {

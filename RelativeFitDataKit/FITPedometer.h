@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
-@class FITPedometerData;
+@class PedometerData;
 
 @interface FITPedometer : NSObject
 
-- (void)startWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
+- (void)startWithDidUpdateBlock:(void(^)(PedometerData * pedometerData))pedometerDidUpdateBlock;
 
 - (void)stop;
 
