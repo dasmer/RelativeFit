@@ -2,11 +2,12 @@
 #import <CoreMotion/CMPedometer.h>
 #import <MTDates/NSDate+MTDates.h>
 #import <UIKit/UIKit.h>
-#import "FITPedometerData.h"
+#import <RelativeFitDataKit/RelativeFitDataKit-Swift.h>
+
 
 @interface FITPedometer ()
 
-@property (nonatomic, copy) void(^pedometerDidUpdateBlock)(FITPedometerData *);
+@property (nonatomic, copy) void(^pedometerDidUpdateBlock)(PedometerData *);
 @property (nonatomic, strong) CMPedometer *pedometer;
 
 @property (strong, nonatomic) CMPedometerData *lastYesterdayData;
@@ -25,11 +26,11 @@
     return self;
 }
 
-- (void)startWithDidUpdateBlock:(void(^)(FITPedometerData * pedometerData))pedometerDidUpdateBlock;
+- (void)startWithDidUpdateBlock:(void(^)(PedometerData * pedometerData))pedometerDidUpdateBlock;
 {
 #if TARGET_IPHONE_SIMULATOR
     if (pedometerDidUpdateBlock) {
-        FITPedometerData *emptyData = [[FITPedometerData alloc] init];
+        PedometerData *emptyData = [[PedometerData alloc] init];
         pedometerDidUpdateBlock(emptyData);
     }
     return;
@@ -45,7 +46,7 @@
                                            self.lastYesterdayData = yesterdayPedometerData;
                                            CMPedometerData *todayPedometerData = self.lastTodayData;
                                            if (todayPedometerData) {
-                                               FITPedometerData *updatedData = [[FITPedometerData alloc] initWithYesterdayData:yesterdayPedometerData
+                                               PedometerData *updatedData = [[PedometerData alloc] initWithYesterdayData:yesterdayPedometerData
                                                                                                                      todayData:todayPedometerData];
                                                if (self.pedometerDidUpdateBlock) {
                                                    self.pedometerDidUpdateBlock(updatedData);
@@ -60,7 +61,7 @@
                                               self.lastTodayData = todayPedometerData;
                                               CMPedometerData *yesterdayPedometerData = self.lastYesterdayData;
                                               if (yesterdayPedometerData) {
-                                                  FITPedometerData *updatedData = [[FITPedometerData alloc] initWithYesterdayData:yesterdayPedometerData
+                                                  PedometerData *updatedData = [[PedometerData alloc] initWithYesterdayData:yesterdayPedometerData
                                                                                                                         todayData:todayPedometerData];
                                                   if (self.pedometerDidUpdateBlock) {
                                                       self.pedometerDidUpdateBlock(updatedData);

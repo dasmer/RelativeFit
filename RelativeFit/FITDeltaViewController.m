@@ -1,6 +1,5 @@
 #import "FITDeltaViewController.h"
-#import "FITPedometer.h"
-#import "FITPedometerData.h"
+@import RelativeFitDataKit;
 
 @interface FITDeltaViewController ()
 
@@ -38,12 +37,12 @@
 - (void)startPedometer
 {
     __weak typeof (self) weakSelf = self;
-    [self.pedometer startWithDidUpdateBlock:^(FITPedometerData *pedometerData) {
+    [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __weak typeof (self) strongSelf = weakSelf;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            strongSelf.stepsLabel.text = [@([pedometerData.numberOfStepsDelta integerValue]) stringValue];
-            strongSelf.distanceLabel.text = [@([pedometerData.numberOfMetersDelta integerValue]) stringValue];
-            strongSelf.floorsLabel.text = [@([pedometerData.numberOfFloorsDelta integerValue]) stringValue];
+            strongSelf.stepsLabel.text = [@(pedometerData.numberOfStepsDelta) stringValue];
+            strongSelf.distanceLabel.text = [@(pedometerData.numberOfMetersDelta) stringValue];
+            strongSelf.floorsLabel.text = [@(pedometerData.numberOfFloorsDelta) stringValue];
         }];
     }];
 }

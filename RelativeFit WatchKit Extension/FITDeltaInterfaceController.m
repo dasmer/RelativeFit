@@ -12,7 +12,6 @@
 
 @end
 
-
 @implementation FITDeltaInterfaceController
 
 - (instancetype)init
@@ -31,12 +30,12 @@
 - (void)willActivate {
     [super willActivate];
     __weak typeof (self) weakSelf = self;
-    [self.pedometer startWithDidUpdateBlock:^(FITPedometerData *pedometerData) {
+    [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __strong typeof (self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *stepsString = [@([pedometerData.numberOfStepsDelta integerValue]) stringValue];
-            NSString *distanceString = [@([pedometerData.numberOfMetersDelta integerValue]) stringValue];
-            NSString *floorsString = [@([pedometerData.numberOfFloorsDelta integerValue]) stringValue];
+            NSString *stepsString = [@(pedometerData.numberOfStepsDelta) stringValue];
+            NSString *distanceString = [@(pedometerData.numberOfMetersDelta) stringValue];
+            NSString *floorsString = [@(pedometerData.numberOfFloorsDelta) stringValue];
 
             [strongSelf.stepsLabel setText:stepsString];
             [strongSelf.metersLabel setText:distanceString];
