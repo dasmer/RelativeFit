@@ -1,8 +1,17 @@
 #import "FITDeltaViewController.h"
+#import "RelativeFit-Swift.h"
 @import RelativeFitDataKit;
 
-@interface FITDeltaViewController ()
+typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
+    FITDeltaViewControllerRowSteps,
+    FITDeltaViewControllerRowDistance,
+    FITDeltaViewControllerRowFloors,
+    FITDeltaViewControllerRowCount
+};
 
+@interface FITDeltaViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *floorsLabel;
@@ -32,6 +41,20 @@
 {
     [super viewDidLoad];
     [self startPedometer];
+    [self configureTableView];
+}
+
+- (void)configureTableView
+{
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.tableView];
+    NSString *cellClassString = NSStringFromClass([FITDeltaTableViewCell class]);
+    UINib *cellNib = [UINib nibWithNibName:cellClassString bundle:nil];
+    [self.tableView registerNib:cellNib
+         forCellReuseIdentifier:cellClassString];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (void)startPedometer
@@ -50,6 +73,18 @@
 - (void)stopPedometer
 {
     [self.pedometer stop];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return FITDeltaViewControllerRowCount;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FITDeltaTableViewCell class])];
 }
 
 @end
