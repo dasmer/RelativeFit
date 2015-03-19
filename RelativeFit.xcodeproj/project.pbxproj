@@ -12,8 +12,10 @@
 		2F1160CA1AAFD69500415967 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160C91AAFD69500415967 /* Images.xcassets */; };
 		2F1160CD1AAFD69500415967 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160CB1AAFD69500415967 /* LaunchScreen.xib */; };
 		2F1160D91AAFD69500415967 /* RelativeFitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160D81AAFD69500415967 /* RelativeFitTests.m */; };
-		2F1160E31AAFD78D00415967 /* FITDeltaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */; };
 		2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */; };
+		2F3D078C1ABA91BA00D649D2 /* FITDeltaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */; };
+		2F62AD521ABA2FDB00E6E5AE /* DeltaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */; };
+		2F62AD541ABA313600E6E5AE /* DeltaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */; };
 		2F7C25BF1AB0D4D40014B69F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
 		2F7C25C51AB0D4D40014B69F /* FITTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25C41AB0D4D40014B69F /* FITTodayViewController.m */; };
 		2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */; };
@@ -33,6 +35,7 @@
 		61B70B9D1AB0AADF006BD64F /* RelativeFitDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61B70BB21AB0ABCF006BD64F /* FITPedometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */; };
+		61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */; };
 		6489DB5C0D3D4FB268EED374 /* libPods-RelativeFitDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */; };
 /* End PBXBuildFile section */
 
@@ -126,10 +129,13 @@
 		2F1160D21AAFD69500415967 /* RelativeFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelativeFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1160D71AAFD69500415967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F1160D81AAFD69500415967 /* RelativeFitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeFitTests.m; sourceTree = "<group>"; };
-		2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITDeltaViewController.xib; sourceTree = "<group>"; };
 		2F1160E41AAFDAB400415967 /* FITDeltaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDeltaViewController.h; sourceTree = "<group>"; };
 		2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDeltaViewController.m; sourceTree = "<group>"; };
 		2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RelativeFit.entitlements; sourceTree = "<group>"; };
+		2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITDeltaViewController.xib; sourceTree = "<group>"; };
+		2F62AD501ABA2FDA00E6E5AE /* RelativeFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RelativeFit-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeltaTableViewCell.swift; sourceTree = "<group>"; };
+		2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeltaTableViewCell.xib; sourceTree = "<group>"; };
 		2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayFit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C25C21AB0D4D40014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7C25C31AB0D4D40014B69F /* FITTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITTodayViewController.h; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 		61B70B981AB0AADF006BD64F /* RelativeFitDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeFitDataKitTests.m; sourceTree = "<group>"; };
 		61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPedometer.h; sourceTree = "<group>"; };
 		61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPedometer.m; sourceTree = "<group>"; };
+		61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		763A03031435C7F95536B284 /* Pods-RelativeFitDataKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFitDataKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit.debug.xcconfig"; sourceTree = "<group>"; };
 		E103AA386B0A8EA187280C9B /* Pods-RelativeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,12 +254,15 @@
 				2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */,
 				2F1160C01AAFD69500415967 /* FITAppDelegate.h */,
 				2F1160C11AAFD69500415967 /* FITAppDelegate.m */,
-				2F1160E21AAFD78D00415967 /* FITDeltaViewController.xib */,
+				2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */,
+				2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */,
+				2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */,
 				2F1160E41AAFDAB400415967 /* FITDeltaViewController.h */,
 				2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */,
 				2F1160C91AAFD69500415967 /* Images.xcassets */,
 				2F1160CB1AAFD69500415967 /* LaunchScreen.xib */,
 				2F1160BC1AAFD69500415967 /* Supporting Files */,
+				2F62AD501ABA2FDA00E6E5AE /* RelativeFit-Bridging-Header.h */,
 			);
 			path = RelativeFit;
 			sourceTree = "<group>";
@@ -355,6 +365,7 @@
 				61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */,
 				61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */,
 				2F90FC4C1AB54726007E5B68 /* PedometerData.swift */,
+				61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */,
 				61B70B871AB0AADF006BD64F /* Supporting Files */,
 			);
 			path = RelativeFitDataKit;
@@ -614,8 +625,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1160CD1AAFD69500415967 /* LaunchScreen.xib in Resources */,
+				2F62AD541ABA313600E6E5AE /* DeltaTableViewCell.xib in Resources */,
 				2F1160CA1AAFD69500415967 /* Images.xcassets in Resources */,
-				2F1160E31AAFD78D00415967 /* FITDeltaViewController.xib in Resources */,
+				2F3D078C1ABA91BA00D649D2 /* FITDeltaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +720,7 @@
 			files = (
 				2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */,
 				2F1160C21AAFD69500415967 /* FITAppDelegate.m in Sources */,
+				2F62AD521ABA2FDB00E6E5AE /* DeltaTableViewCell.swift in Sources */,
 				2F1160BF1AAFD69500415967 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +755,7 @@
 			files = (
 				2F90FC4D1AB54726007E5B68 /* PedometerData.swift in Sources */,
 				61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */,
+				61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,6 +913,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RelativeFit/RelativeFit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -909,6 +924,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RelativeFit/RelativeFit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -916,6 +933,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RelativeFit/RelativeFit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -926,6 +944,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RelativeFit/RelativeFit-Bridging-Header.h";
 			};
 			name = Release;
 		};
