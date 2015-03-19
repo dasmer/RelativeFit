@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -59,7 +59,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="deltaValueLabel" destination="Py4-8X-eIJ" id="mPC-Ab-1X4"/>
+                <outlet property="todayTitleLabel" destination="nll-xq-irs" id="fYG-r7-yKd"/>
                 <outlet property="todayValueLabel" destination="QFw-gm-MNT" id="0ZB-DF-tcb"/>
+                <outlet property="yesterdayTitleLabel" destination="Xxk-C5-jwc" id="nIF-kP-mp2"/>
                 <outlet property="yesterdayValueLabel" destination="X8f-Ae-8NZ" id="ihj-yo-gTn"/>
             </connections>
             <point key="canvasLocation" x="424" y="264"/>
