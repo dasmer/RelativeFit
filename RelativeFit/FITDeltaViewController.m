@@ -11,10 +11,7 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 
 @interface FITDeltaViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *floorsLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) FITPedometer *pedometer;
 
 @end
@@ -40,21 +37,23 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Today's Delta", nil);
     [self startPedometer];
     [self configureTableView];
 }
 
+
 - (void)configureTableView
 {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self.view addSubview:self.tableView];
     NSString *cellClassString = NSStringFromClass([FITDeltaTableViewCell class]);
     UINib *cellNib = [UINib nibWithNibName:cellClassString bundle:nil];
     [self.tableView registerNib:cellNib
          forCellReuseIdentifier:cellClassString];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    CGFloat requiredHeight = [FITDeltaTableViewCell height] * FITDeltaViewControllerRowCount;
+    CGFloat maxHeight = CGRectGetHeight(self.view.bounds) - 64;
+    if (requiredHeight < maxHeight) {
+        self.tableView.scrollEnabled  = NO;
+    }
 }
 
 - (void)startPedometer
@@ -63,9 +62,9 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
     [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __weak typeof (self) strongSelf = weakSelf;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            strongSelf.stepsLabel.text = [@(pedometerData.numberOfStepsDelta) stringValue];
-            strongSelf.distanceLabel.text = [@(pedometerData.numberOfMetersDelta) stringValue];
-            strongSelf.floorsLabel.text = [@(pedometerData.numberOfFloorsDelta) stringValue];
+//            strongSelf.stepsLabel.text = [@(pedometerData.numberOfStepsDelta) stringValue];
+//            strongSelf.distanceLabel.text = [@(pedometerData.numberOfMetersDelta) stringValue];
+//            strongSelf.floorsLabel.text = [@(pedometerData.numberOfFloorsDelta) stringValue];
         }];
     }];
 }
@@ -84,7 +83,16 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FITDeltaTableViewCell class])];
+    FITDeltaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FITDeltaTableViewCell class])];
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [FITDeltaTableViewCell height];
 }
 
 @end
