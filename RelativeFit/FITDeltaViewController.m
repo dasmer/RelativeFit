@@ -40,7 +40,6 @@
     [self configureTableView];
 }
 
-
 - (void)configureTableView
 {
     NSString *cellClassString = NSStringFromClass([DeltaTableViewCell class]);
@@ -53,7 +52,6 @@
         self.tableView.scrollEnabled  = NO;
     }
 }
-
 
 - (void)configureCells
 {
@@ -94,6 +92,7 @@
 {
     [self.pedometer stop];
 }
+
 
 #pragma mark - UITableViewDataSource
 
