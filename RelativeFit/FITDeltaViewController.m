@@ -45,11 +45,11 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 
 - (void)configureTableView
 {
-    NSString *cellClassString = NSStringFromClass([FITDeltaTableViewCell class]);
+    NSString *cellClassString = NSStringFromClass([DeltaTableViewCell class]);
     UINib *cellNib = [UINib nibWithNibName:cellClassString bundle:nil];
     [self.tableView registerNib:cellNib
          forCellReuseIdentifier:cellClassString];
-    CGFloat requiredHeight = [FITDeltaTableViewCell height] * FITDeltaViewControllerRowCount;
+    CGFloat requiredHeight = [DeltaTableViewCell height] * FITDeltaViewControllerRowCount;
     CGFloat maxHeight = CGRectGetHeight(self.view.bounds) - 64;
     if (requiredHeight < maxHeight) {
         self.tableView.scrollEnabled  = NO;
@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FITDeltaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FITDeltaTableViewCell class])];
+    DeltaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DeltaTableViewCell class])];
     return cell;
 }
 
@@ -92,7 +92,7 @@ typedef NS_ENUM(NSUInteger, FITDeltaViewControllerRow) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [FITDeltaTableViewCell height];
+    return [DeltaTableViewCell height];
 }
 
 @end

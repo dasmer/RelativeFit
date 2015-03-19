@@ -1,9 +1,9 @@
 import UIKit
 import RelativeFitDataKit
 
-@objc(FITDeltaTableViewCell)
+@objc(DeltaTableViewCell)
 
-public class FITDeltaTableViewCell: UITableViewCell {
+public class DeltaTableViewCell: UITableViewCell {
 
     class func height() -> Int {
         return 90;

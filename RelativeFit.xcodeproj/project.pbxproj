@@ -14,8 +14,8 @@
 		2F1160D91AAFD69500415967 /* RelativeFitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160D81AAFD69500415967 /* RelativeFitTests.m */; };
 		2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */; };
 		2F3D078C1ABA91BA00D649D2 /* FITDeltaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */; };
-		2F62AD521ABA2FDB00E6E5AE /* FITDeltaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62AD511ABA2FDB00E6E5AE /* FITDeltaTableViewCell.swift */; };
-		2F62AD541ABA313600E6E5AE /* FITDeltaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F62AD531ABA313600E6E5AE /* FITDeltaTableViewCell.xib */; };
+		2F62AD521ABA2FDB00E6E5AE /* DeltaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */; };
+		2F62AD541ABA313600E6E5AE /* DeltaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */; };
 		2F7C25BF1AB0D4D40014B69F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6187D0F91AB097890002BD41 /* NotificationCenter.framework */; };
 		2F7C25C51AB0D4D40014B69F /* FITTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C25C41AB0D4D40014B69F /* FITTodayViewController.m */; };
 		2F7C25C71AB0D4D40014B69F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C25C61AB0D4D40014B69F /* MainInterface.storyboard */; };
@@ -133,8 +133,8 @@
 		2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RelativeFit.entitlements; sourceTree = "<group>"; };
 		2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITDeltaViewController.xib; sourceTree = "<group>"; };
 		2F62AD501ABA2FDA00E6E5AE /* RelativeFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RelativeFit-Bridging-Header.h"; sourceTree = "<group>"; };
-		2F62AD511ABA2FDB00E6E5AE /* FITDeltaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FITDeltaTableViewCell.swift; sourceTree = "<group>"; };
-		2F62AD531ABA313600E6E5AE /* FITDeltaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITDeltaTableViewCell.xib; sourceTree = "<group>"; };
+		2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeltaTableViewCell.swift; sourceTree = "<group>"; };
+		2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeltaTableViewCell.xib; sourceTree = "<group>"; };
 		2F7C25BE1AB0D4D40014B69F /* TodayFit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayFit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C25C21AB0D4D40014B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7C25C31AB0D4D40014B69F /* FITTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITTodayViewController.h; sourceTree = "<group>"; };
@@ -252,8 +252,8 @@
 				2F2353ED1AB0CECC001D5939 /* RelativeFit.entitlements */,
 				2F1160C01AAFD69500415967 /* FITAppDelegate.h */,
 				2F1160C11AAFD69500415967 /* FITAppDelegate.m */,
-				2F62AD511ABA2FDB00E6E5AE /* FITDeltaTableViewCell.swift */,
-				2F62AD531ABA313600E6E5AE /* FITDeltaTableViewCell.xib */,
+				2F62AD511ABA2FDB00E6E5AE /* DeltaTableViewCell.swift */,
+				2F62AD531ABA313600E6E5AE /* DeltaTableViewCell.xib */,
 				2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */,
 				2F1160E41AAFDAB400415967 /* FITDeltaViewController.h */,
 				2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */,
@@ -622,7 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1160CD1AAFD69500415967 /* LaunchScreen.xib in Resources */,
-				2F62AD541ABA313600E6E5AE /* FITDeltaTableViewCell.xib in Resources */,
+				2F62AD541ABA313600E6E5AE /* DeltaTableViewCell.xib in Resources */,
 				2F1160CA1AAFD69500415967 /* Images.xcassets in Resources */,
 				2F3D078C1ABA91BA00D649D2 /* FITDeltaViewController.xib in Resources */,
 			);
@@ -717,7 +717,7 @@
 			files = (
 				2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */,
 				2F1160C21AAFD69500415967 /* FITAppDelegate.m in Sources */,
-				2F62AD521ABA2FDB00E6E5AE /* FITDeltaTableViewCell.swift in Sources */,
+				2F62AD521ABA2FDB00E6E5AE /* DeltaTableViewCell.swift in Sources */,
 				2F1160BF1AAFD69500415967 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
