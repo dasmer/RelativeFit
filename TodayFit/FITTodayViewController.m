@@ -44,7 +44,7 @@ static NSString *const UIViewHiddenKey = @"hidden";
         __strong typeof (self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
 
-            NSString *titleString = [NSString stringWithFormat:@"%@ steps", [@(pedometerData.numberOfStepsDelta) stringValue]];
+            NSString *titleString = [NSString stringWithFormat:@"%@ steps", [@(pedometerData.numberOfStepsDelta) fit_deltaStringValue]];
             NSString *detailString = [NSString stringWithFormat:@"%@ m ･ %@ floors",[@(pedometerData.numberOfMetersDelta) stringValue], [@(pedometerData.numberOfFloorsDelta) stringValue]];
 
             UILabel *titleLabel = strongSelf.titleLabel;

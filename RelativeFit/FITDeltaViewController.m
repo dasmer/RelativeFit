@@ -70,18 +70,18 @@
         __weak typeof (self) strongSelf = weakSelf;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             DeltaTableViewCell *stepsCell = strongSelf.stepsCell;
-            stepsCell.deltaValueLabel.text = [[@(pedometerData.numberOfStepsDelta) fit_deltaString] stringByAppendingString:NSLocalizedString(@" steps", nil)];
+            stepsCell.deltaValueLabel.text = [[@(pedometerData.numberOfStepsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" steps", nil)];
             stepsCell.todayValueLabel.text = [@(pedometerData.numberOfStepsToday) stringValue];
             stepsCell.yesterdayValueLabel.text = [@(pedometerData.numberOfStepsYesterday) stringValue];
 
             DeltaTableViewCell *distanceCell = strongSelf.distanceCell;
-            distanceCell.deltaValueLabel.text = [[@(pedometerData.numberOfMetersDelta) fit_deltaString] stringByAppendingString:NSLocalizedString(@" meters", nil)];
+            distanceCell.deltaValueLabel.text = [[@(pedometerData.numberOfMetersDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" meters", nil)];
             distanceCell.todayValueLabel.text = [@(pedometerData.numberOfMetersToday) stringValue];
             distanceCell.yesterdayValueLabel.text = [@(pedometerData.numberOfMetersYesterday) stringValue];
 
 
             DeltaTableViewCell *floorsCell = strongSelf.floorsCell;
-            floorsCell.deltaValueLabel.text = [[@(pedometerData.numberOfFloorsDelta) fit_deltaString] stringByAppendingString:NSLocalizedString(@" floors", nil)];
+            floorsCell.deltaValueLabel.text = [[@(pedometerData.numberOfFloorsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" floors", nil)];
             floorsCell.todayValueLabel.text = [@(pedometerData.numberOfAbsoluteFloorsToday) stringValue];
             floorsCell.yesterdayValueLabel.text = [@(pedometerData.numberOfAbsoluteFloorsYesterday) stringValue];
         }];

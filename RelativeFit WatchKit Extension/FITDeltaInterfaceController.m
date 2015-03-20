@@ -33,7 +33,7 @@
     [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __strong typeof (self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *stepsString = [@(pedometerData.numberOfStepsDelta) stringValue];
+            NSString *stepsString = [@(pedometerData.numberOfStepsDelta) fit_deltaStringValue];
             NSString *distanceString = [@(pedometerData.numberOfMetersDelta) stringValue];
             NSString *floorsString = [@(pedometerData.numberOfFloorsDelta) stringValue];
 
