@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Today's Delta", nil);
+    self.title = NSLocalizedString(@"Δ Today", nil);
     [self startPedometer];
     [self configureCells];
     [self configureTableView];
