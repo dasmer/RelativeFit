@@ -35,6 +35,8 @@
 		61B70B9D1AB0AADF006BD64F /* RelativeFitDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61B70BB21AB0ABCF006BD64F /* FITPedometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */; };
+		61C474031ABCCBB300F022C2 /* FITSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C474011ABCCBB300F022C2 /* FITSettingsController.h */; };
+		61C474041ABCCBB300F022C2 /* FITSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C474021ABCCBB300F022C2 /* FITSettingsController.m */; };
 		61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */; };
 		6489DB5C0D3D4FB268EED374 /* libPods-RelativeFitDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */; };
 /* End PBXBuildFile section */
@@ -161,6 +163,8 @@
 		61B70B981AB0AADF006BD64F /* RelativeFitDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeFitDataKitTests.m; sourceTree = "<group>"; };
 		61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPedometer.h; sourceTree = "<group>"; };
 		61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPedometer.m; sourceTree = "<group>"; };
+		61C474011ABCCBB300F022C2 /* FITSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsController.h; sourceTree = "<group>"; };
+		61C474021ABCCBB300F022C2 /* FITSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsController.m; sourceTree = "<group>"; };
 		61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		763A03031435C7F95536B284 /* Pods-RelativeFitDataKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFitDataKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +365,8 @@
 		61B70B861AB0AADF006BD64F /* RelativeFitDataKit */ = {
 			isa = PBXGroup;
 			children = (
+				61C474011ABCCBB300F022C2 /* FITSettingsController.h */,
+				61C474021ABCCBB300F022C2 /* FITSettingsController.m */,
 				61B70B891AB0AADF006BD64F /* RelativeFitDataKit.h */,
 				61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */,
 				61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */,
@@ -416,6 +422,7 @@
 			files = (
 				61B70BB21AB0ABCF006BD64F /* FITPedometer.h in Headers */,
 				61B70B8A1AB0AADF006BD64F /* RelativeFitDataKit.h in Headers */,
+				61C474031ABCCBB300F022C2 /* FITSettingsController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +762,7 @@
 			files = (
 				2F90FC4D1AB54726007E5B68 /* PedometerData.swift in Sources */,
 				61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */,
+				61C474041ABCCBB300F022C2 /* FITSettingsController.m in Sources */,
 				61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
