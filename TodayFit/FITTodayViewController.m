@@ -3,12 +3,14 @@
 
 @import RelativeFitDataKit;
 
+static NSString *const UIViewHiddenKey = @"hidden";
+
 @interface FITTodayViewController () <NCWidgetProviding>
 
-@property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *floorsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (strong, nonatomic) FITPedometer *pedometer;
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
@@ -25,7 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view.subviews setValue:@(YES) forKey:@"hidden"];
+    [self.view.subviews setValue:@(YES) forKey:UIViewHiddenKey];
+    self.titleLabel.textColor = [UIColor fit_emeraldColor];
+    self.detailLabel.textColor = [UIColor whiteColor];
+    self.button.tintColor = [UIColor fit_emeraldColor];
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
@@ -38,17 +43,18 @@
     [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __strong typeof (self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *stepsString = [@(pedometerData.numberOfStepsDelta) stringValue];
-            NSString *distanceString = [@(pedometerData.numberOfMetersDelta) stringValue];
-            NSString *floorsString = [@(pedometerData.numberOfFloorsDelta) stringValue];
-            if (![strongSelf.stepsLabel.text isEqualToString:stepsString]
-                || ![strongSelf.distanceLabel.text isEqualToString:distanceString]
-                || ![strongSelf.floorsLabel.text isEqualToString:floorsString]) {
-                [self.view.subviews setValue:@(YES) forKey:@"hidden"];
-                strongSelf.stepsLabel.text = stepsString;
-                strongSelf.distanceLabel.text = distanceString;
-                strongSelf.floorsLabel.text = floorsString;
-                [self.view.subviews setValue:@(NO) forKey:@"hidden"];
+
+            NSString *titleString = [NSString stringWithFormat:@"%@ steps", [@(pedometerData.numberOfStepsDelta) fit_deltaStringValue]];
+            NSString *detailString = [NSString stringWithFormat:@"%@ m ･ %@ floors",[@(pedometerData.numberOfMetersDelta) stringValue], [@(pedometerData.numberOfFloorsDelta) stringValue]];
+
+            UILabel *titleLabel = strongSelf.titleLabel;
+            UILabel *detailLabel = strongSelf.detailLabel;
+
+            if (![titleLabel.text isEqualToString:titleString] || ![detailLabel.text isEqualToString:detailString]) {
+                [self.view.subviews setValue:@(YES) forKey:UIViewHiddenKey];
+                titleLabel.text = titleString;
+                detailLabel.text = detailString;
+                [self.view.subviews setValue:@(NO) forKey:UIViewHiddenKey];
                 completionHandler(NCUpdateResultNewData);
             }
             else {
@@ -58,6 +64,11 @@
     }];
 }
 
+- (IBAction)userTappedButton:(id)sender
+{
+    NSURL *URL = [NSURL URLWithString:@"relativefit://"];
+    [self.extensionContext openURL:URL completionHandler:nil];
+}
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
 {
