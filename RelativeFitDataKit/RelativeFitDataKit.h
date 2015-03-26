@@ -10,4 +10,5 @@ FOUNDATION_EXPORT const unsigned char RelativeFitDataKitVersionString[];
 
 
 #import <RelativeFitDataKit/FITPedometer.h>
+#import <RelativeFitDataKit/FITSettingsController.h>
 #import <RelativeFitDataKit/RelativeFitDataKit-Swift.h>

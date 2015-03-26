@@ -1,11 +1,14 @@
 #import "FITDeltaViewController.h"
 #import "RelativeFit-Swift.h"
+#import "FITSettingsViewController.h"
+
 @import RelativeFitDataKit;
 
 @interface FITDeltaViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) FITPedometer *pedometer;
+@property (strong, nonatomic) FITSettingsController *settingsController;
 @property (strong, nonatomic) DeltaTableViewCell *stepsCell;
 @property (strong, nonatomic) DeltaTableViewCell *distanceCell;
 @property (strong, nonatomic) DeltaTableViewCell *floorsCell;
@@ -25,6 +28,7 @@
     self = [super init];
     if (self) {
         _pedometer = [[FITPedometer alloc] init];
+        _settingsController = [[FITSettingsController alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopPedometer) name:UIApplicationDidEnterBackgroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startPedometer) name:UIApplicationWillEnterForegroundNotification object:nil];
     }
@@ -34,10 +38,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Δ Today", nil);
     [self startPedometer];
+    [self configureNavigationBar];
     [self configureCells];
     [self configureTableView];
+}
+
+- (void)configureNavigationBar
+{
+    self.title = NSLocalizedString(@"Δ Today", nil);
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Settings", nil) style:UIBarButtonItemStylePlain target:self action:@selector(userTappedSettingsButton)];
+    self.navigationItem.rightBarButtonItem = settingsButton;
 }
 
 - (void)configureTableView
@@ -75,7 +86,8 @@
             stepsCell.yesterdayValueLabel.text = [@(pedometerData.numberOfStepsYesterday) stringValue];
 
             DeltaTableViewCell *distanceCell = strongSelf.distanceCell;
-            distanceCell.deltaValueLabel.text = [[@(pedometerData.numberOfMetersDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" meters", nil)];
+            NSString *units = [NSString fit_unitsForDistanceType:self.settingsController.distanceType];
+            distanceCell.deltaValueLabel.text = [[@(pedometerData.numberOfMetersDelta) fit_deltaStringValue] stringByAppendingString:units];
             distanceCell.todayValueLabel.text = [@(pedometerData.numberOfMetersToday) stringValue];
             distanceCell.yesterdayValueLabel.text = [@(pedometerData.numberOfMetersYesterday) stringValue];
 
@@ -112,6 +124,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [DeltaTableViewCell height];
+}
+
+- (void)userTappedSettingsButton
+{
+    FITSettingsViewController *settingsViewController = [[FITSettingsViewController alloc] initWithSettingsController:self.settingsController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

@@ -5,7 +5,7 @@ static NSString *const FITSettingsFloorCountUserDefaultsKey = @"FITSettingsFloor
 
 @implementation FITSettingsController
 
-- (void)setDistanceType:(FITSettingsDistanceUnits)distanceType
+- (void)setDistanceType:(FITDistanceUnits)distanceType
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(distanceType))];
     NSUserDefaults *userDefaults = [self groupUserDefaults];
@@ -15,13 +15,13 @@ static NSString *const FITSettingsFloorCountUserDefaultsKey = @"FITSettingsFloor
     [self didChangeValueForKey:NSStringFromSelector(@selector(distanceType))];
 }
 
-- (FITSettingsDistanceUnits)distanceType
+- (FITDistanceUnits)distanceType
 {
     NSUserDefaults *userDefaults = [self groupUserDefaults];
     return [userDefaults integerForKey:FITSettingsDistanceTypeUserDefaultsKey];
 }
 
-- (void)setFloorCountMethod:(FITSettingsFloorCountMethod)floorCountMethod
+- (void)setFloorCountMethod:(FITFloorCountMethod)floorCountMethod
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(floorCountMethod))];
     NSUserDefaults *userDefaults = [self groupUserDefaults];
@@ -31,7 +31,7 @@ static NSString *const FITSettingsFloorCountUserDefaultsKey = @"FITSettingsFloor
     [self didChangeValueForKey:NSStringFromSelector(@selector(floorCountMethod))];
 }
 
-- (FITSettingsFloorCountMethod)floorCountMethod
+- (FITFloorCountMethod)floorCountMethod
 {
     NSUserDefaults *userDefaults = [self groupUserDefaults];
     return [userDefaults integerForKey:FITSettingsFloorCountUserDefaultsKey];

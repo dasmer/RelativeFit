@@ -35,11 +35,15 @@
 		61B70B9D1AB0AADF006BD64F /* RelativeFitDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B851AB0AADF006BD64F /* RelativeFitDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61B70BB21AB0ABCF006BD64F /* FITPedometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */; };
-		61C474031ABCCBB300F022C2 /* FITSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C474011ABCCBB300F022C2 /* FITSettingsController.h */; };
-		61C474041ABCCBB300F022C2 /* FITSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C474021ABCCBB300F022C2 /* FITSettingsController.m */; };
 		61C474001ABCBB1500F022C2 /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C473FF1ABCBB1500F022C2 /* NSNumberExtension.swift */; };
+		61C474031ABCCBB300F022C2 /* FITSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C474011ABCCBB300F022C2 /* FITSettingsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61C474041ABCCBB300F022C2 /* FITSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C474021ABCCBB300F022C2 /* FITSettingsController.m */; };
+		61C474081ABE6D6800F022C2 /* NSStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C474071ABE6D6800F022C2 /* NSStringExtension.swift */; };
+		61DCA1F81AC3A44100F692D1 /* FITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DCA1F71AC3A44100F692D1 /* FITSettingsViewController.m */; };
+		61DCA1FA1AC3A46200F692D1 /* FITSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DCA1F91AC3A46200F692D1 /* FITSettingsViewController.xib */; };
 		61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */; };
 		6489DB5C0D3D4FB268EED374 /* libPods-RelativeFitDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */; };
+		80435A1FE087CB3777BCA457 /* libPods-RelativeFit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19344FBDDCE6E0CC81FCCB9 /* libPods-RelativeFit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,12 +168,17 @@
 		61B70B981AB0AADF006BD64F /* RelativeFitDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeFitDataKitTests.m; sourceTree = "<group>"; };
 		61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPedometer.h; sourceTree = "<group>"; };
 		61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPedometer.m; sourceTree = "<group>"; };
+		61C473FF1ABCBB1500F022C2 /* NSNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
 		61C474011ABCCBB300F022C2 /* FITSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsController.h; sourceTree = "<group>"; };
 		61C474021ABCCBB300F022C2 /* FITSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsController.m; sourceTree = "<group>"; };
-		61C473FF1ABCBB1500F022C2 /* NSNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
+		61C474071ABE6D6800F022C2 /* NSStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExtension.swift; sourceTree = "<group>"; };
 		61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		61DCA1F61AC3A44100F692D1 /* FITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsViewController.h; sourceTree = "<group>"; };
+		61DCA1F71AC3A44100F692D1 /* FITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsViewController.m; sourceTree = "<group>"; };
+		61DCA1F91AC3A46200F692D1 /* FITSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FITSettingsViewController.xib; sourceTree = "<group>"; };
 		669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		763A03031435C7F95536B284 /* Pods-RelativeFitDataKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFitDataKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit.debug.xcconfig"; sourceTree = "<group>"; };
+		A19344FBDDCE6E0CC81FCCB9 /* libPods-RelativeFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelativeFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E103AA386B0A8EA187280C9B /* Pods-RelativeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelativeFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B70B9C1AB0AADF006BD64F /* RelativeFitDataKit.framework in Frameworks */,
+				80435A1FE087CB3777BCA457 /* libPods-RelativeFit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +275,9 @@
 				2F3D078B1ABA91BA00D649D2 /* FITDeltaViewController.xib */,
 				2F1160E41AAFDAB400415967 /* FITDeltaViewController.h */,
 				2F1160E51AAFDAB400415967 /* FITDeltaViewController.m */,
+				61DCA1F61AC3A44100F692D1 /* FITSettingsViewController.h */,
+				61DCA1F71AC3A44100F692D1 /* FITSettingsViewController.m */,
+				61DCA1F91AC3A46200F692D1 /* FITSettingsViewController.xib */,
 				2F1160C91AAFD69500415967 /* Images.xcassets */,
 				2F1160CB1AAFD69500415967 /* LaunchScreen.xib */,
 				2F1160BC1AAFD69500415967 /* Supporting Files */,
@@ -360,6 +373,7 @@
 			children = (
 				6187D0F91AB097890002BD41 /* NotificationCenter.framework */,
 				1EABF08A7F40D423EBDA06ED /* libPods-RelativeFitDataKit.a */,
+				A19344FBDDCE6E0CC81FCCB9 /* libPods-RelativeFit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -367,14 +381,15 @@
 		61B70B861AB0AADF006BD64F /* RelativeFitDataKit */ = {
 			isa = PBXGroup;
 			children = (
+				61B70B891AB0AADF006BD64F /* RelativeFitDataKit.h */,
 				61C474011ABCCBB300F022C2 /* FITSettingsController.h */,
 				61C474021ABCCBB300F022C2 /* FITSettingsController.m */,
-				61B70B891AB0AADF006BD64F /* RelativeFitDataKit.h */,
 				61B70BAE1AB0ABCF006BD64F /* FITPedometer.h */,
 				61B70BAF1AB0ABCF006BD64F /* FITPedometer.m */,
 				2F90FC4C1AB54726007E5B68 /* PedometerData.swift */,
 				61CB5D9B1ABB025E00405FAD /* UIColorExtension.swift */,
 				61C473FF1ABCBB1500F022C2 /* NSNumberExtension.swift */,
+				61C474071ABE6D6800F022C2 /* NSStringExtension.swift */,
 				61B70B871AB0AADF006BD64F /* Supporting Files */,
 			);
 			path = RelativeFitDataKit;
@@ -436,11 +451,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F1160DC1AAFD69500415967 /* Build configuration list for PBXNativeTarget "RelativeFit" */;
 			buildPhases = (
+				E7FDCB9531B4D7E8E1AE4492 /* Check Pods Manifest.lock */,
 				2F1160B51AAFD69500415967 /* Sources */,
 				2F1160B61AAFD69500415967 /* Frameworks */,
 				2F1160B71AAFD69500415967 /* Resources */,
 				6187D1091AB097890002BD41 /* Embed App Extensions */,
 				61B70BA51AB0AADF006BD64F /* Embed Frameworks */,
+				C83F8A36C692585429C24A21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -635,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1160CD1AAFD69500415967 /* LaunchScreen.xib in Resources */,
+				61DCA1FA1AC3A46200F692D1 /* FITSettingsViewController.xib in Resources */,
 				2F62AD541ABA313600E6E5AE /* DeltaTableViewCell.xib in Resources */,
 				2F1160CA1AAFD69500415967 /* Images.xcassets in Resources */,
 				2F3D078C1ABA91BA00D649D2 /* FITDeltaViewController.xib in Resources */,
@@ -691,6 +709,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C83F8A36C692585429C24A21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RelativeFit/Pods-RelativeFit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4F2A0779006DD4597292DDE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,6 +737,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RelativeFitDataKit/Pods-RelativeFitDataKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7FDCB9531B4D7E8E1AE4492 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC9EC2A6BC336338DB093BE1 /* Check Pods Manifest.lock */ = {
@@ -730,6 +778,7 @@
 			files = (
 				2F1160E61AAFDAB400415967 /* FITDeltaViewController.m in Sources */,
 				2F1160C21AAFD69500415967 /* FITAppDelegate.m in Sources */,
+				61DCA1F81AC3A44100F692D1 /* FITSettingsViewController.m in Sources */,
 				2F62AD521ABA2FDB00E6E5AE /* DeltaTableViewCell.swift in Sources */,
 				2F1160BF1AAFD69500415967 /* main.m in Sources */,
 			);
@@ -765,6 +814,7 @@
 			files = (
 				2F90FC4D1AB54726007E5B68 /* PedometerData.swift in Sources */,
 				61C474001ABCBB1500F022C2 /* NSNumberExtension.swift in Sources */,
+				61C474081ABE6D6800F022C2 /* NSStringExtension.swift in Sources */,
 				61B70BB31AB0ABCF006BD64F /* FITPedometer.m in Sources */,
 				61C474041ABCCBB300F022C2 /* FITSettingsController.m in Sources */,
 				61E714401ABB128A0006826E /* UIColorExtension.swift in Sources */,
@@ -923,6 +973,7 @@
 		};
 		2F1160DD1AAFD69500415967 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669C21F45674D38189E7C530 /* Pods-RelativeFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -943,6 +994,7 @@
 		};
 		2F1160DE1AAFD69500415967 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E103AA386B0A8EA187280C9B /* Pods-RelativeFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -997,6 +1049,8 @@
 		2F7C25CC1AB0D4D40014B69F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1014,6 +1068,8 @@
 		2F7C25CD1AB0D4D40014B69F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -1113,6 +1169,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1139,6 +1196,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

@@ -1,19 +1,19 @@
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, FITSettingsDistanceUnits) {
-    FITSettingsDistanceUnitsMiles,
-    FITSettingsDistanceUnitsKilometers
+typedef NS_ENUM(NSUInteger, FITDistanceUnits) {
+    FITDistanceUnitsMiles,
+    FITDistanceUnitsKilometers
 };
 
-typedef NS_ENUM(NSUInteger, FITSettingsFloorCountMethod) {
-    FITSettingsFloorCountMethodTotal,
-    FITSettingsFloorCountMethodTotalAscending,
-    FITSettingsFloorCountMethodTotalDescending
+typedef NS_ENUM(NSUInteger, FITFloorCountMethod) {
+    FITFloorCountMethodTotal,
+    FITFloorCountMethodTotalAscending,
+    FITFloorCountMethodTotalDescending
 };
 
 @interface FITSettingsController : NSObject
 
-@property (nonatomic, assign) FITSettingsDistanceUnits distanceType;
-@property (nonatomic, assign) FITSettingsFloorCountMethod floorCountMethod;
+@property (nonatomic, assign) FITDistanceUnits distanceType;
+@property (nonatomic, assign) FITFloorCountMethod floorCountMethod;
 
 @end
