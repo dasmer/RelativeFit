@@ -3,17 +3,17 @@ import CoreMotion
 
 public class PedometerData: NSObject {
 
-    public let numberOfStepsYesterday = 0
-    public let numberOfStepsToday = 0
+    public let numberOfStepsYesterday:Int
+    public let numberOfStepsToday:Int
 
-    public let numberOfMetersYesterday = 0
-    public let numberOfMetersToday = 0
+    public let numberOfMetersYesterday:Int
+    public let numberOfMetersToday:Int
 
-    public let numberOfFloorsAscendedYesterday = 0
-    public let numberOfFloorsAscendedToday = 0
+    public let numberOfFloorsAscendedYesterday:Int
+    public let numberOfFloorsAscendedToday:Int
 
-    public let numberOfFloorsDescendedYesterday = 0
-    public let numberOfFloorsDescendedToday = 0
+    public let numberOfFloorsDescendedYesterday:Int
+    public let numberOfFloorsDescendedToday:Int
 
     public var numberOfAbsoluteFloorsYesterday : Int {
         get {
@@ -44,10 +44,6 @@ public class PedometerData: NSObject {
         get {
             return numberOfAbsoluteFloorsToday - numberOfAbsoluteFloorsYesterday
         }
-    }
-
-    override public init() {
-        super.init()
     }
 
     public init(yesterdayData: CMPedometerData, todayData: CMPedometerData) {

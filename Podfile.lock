@@ -13,7 +13,7 @@ DEPENDENCIES:
   - ReactiveCocoa
 
 SPEC CHECKSUMS:
-  MTDates: e04c9433bf5f1d5cb55a1862ec018a01b5da75c3
-  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+  MTDates: 1dbf92ecda49c0fc42bfd692bda3c471069b57ba
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.3
