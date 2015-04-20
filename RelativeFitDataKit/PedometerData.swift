@@ -62,4 +62,16 @@ public class PedometerData: NSObject {
         super.init()
     }
 
+    override public init() {
+        numberOfStepsYesterday = 0
+        numberOfStepsToday = 0
+        numberOfMetersYesterday = 0
+        numberOfMetersToday = 0
+        numberOfFloorsAscendedYesterday = 0
+        numberOfFloorsAscendedToday = 0
+        numberOfFloorsDescendedYesterday = 0
+        numberOfFloorsDescendedToday = 0
+        super.init();
+    }
+
 }

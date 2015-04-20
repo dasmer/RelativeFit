@@ -1,4 +1,5 @@
 #import "FITDeltaViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "RelativeFit-Swift.h"
 #import "FITSettingsViewController.h"
 
@@ -8,6 +9,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) FITPedometer *pedometer;
+@property (strong, nonatomic) PedometerData *pedometerData;
 @property (strong, nonatomic) FITSettingsController *settingsController;
 @property (strong, nonatomic) DeltaTableViewCell *stepsCell;
 @property (strong, nonatomic) DeltaTableViewCell *distanceCell;
@@ -38,10 +40,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startPedometer];
     [self configureNavigationBar];
     [self configureCells];
     [self configureTableView];
+    [self configureBindings];
+    [self startPedometer];
 }
 
 - (void)configureNavigationBar
@@ -49,6 +52,16 @@
     self.title = NSLocalizedString(@"Δ Today", nil);
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Settings", nil) style:UIBarButtonItemStylePlain target:self action:@selector(userTappedSettingsButton)];
     self.navigationItem.rightBarButtonItem = settingsButton;
+}
+
+- (void)configureCells
+{
+    NSString *cellClassString = NSStringFromClass([DeltaTableViewCell class]);
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    self.stepsCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
+    self.distanceCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
+    self.floorsCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
+    self.cells = @[self.stepsCell, self.distanceCell, self.floorsCell];
 }
 
 - (void)configureTableView
@@ -64,14 +77,63 @@
     }
 }
 
-- (void)configureCells
+- (void)configureBindings
 {
-    NSString *cellClassString = NSStringFromClass([DeltaTableViewCell class]);
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    self.stepsCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
-    self.distanceCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
-    self.floorsCell = [[mainBundle loadNibNamed:cellClassString owner:self options:nil] firstObject];
-    self.cells = @[self.stepsCell, self.distanceCell, self.floorsCell];
+    RACSignal *pedometerDataSignal = [RACObserve(self, pedometerData) deliverOnMainThread];
+
+    // Bind Steps Cells
+    RAC(self.stepsCell.deltaValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [[@(pedometerData.numberOfStepsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" steps", nil)];
+    }];
+
+    RAC(self.stepsCell.todayValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [@(pedometerData.numberOfStepsToday) stringValue];
+    }];
+
+    RAC(self.stepsCell.yesterdayValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [@(pedometerData.numberOfStepsYesterday) stringValue];
+    }];
+
+    // Bind Distance Cells
+    RACSignal *unitsSignal = RACObserve(self.settingsController, distanceType);
+    RACSignal *stepsUpdateSignal = [[RACSignal combineLatest:@[pedometerDataSignal, unitsSignal]] deliverOnMainThread];
+
+    RAC(self.distanceCell.deltaValueLabel, text) = [stepsUpdateSignal map:^id(RACTuple *tuple) {
+        PedometerData *pedometerData = [tuple first];
+        FITDistanceUnits distanceUnits = [[tuple last] unsignedIntegerValue];
+
+        NSString *amountString = [@([@(pedometerData.numberOfMetersDelta) fit_metersInDistanceUnits:distanceUnits]) fit_deltaStringValue];
+        NSString *unitsString = [NSString fit_unitsForDistanceType:distanceUnits];
+        return [NSString stringWithFormat:@"%@ %@", amountString, unitsString];
+    }];
+
+    RAC(self.distanceCell.todayValueLabel, text) = [stepsUpdateSignal map:^id(RACTuple *tuple) {
+        PedometerData *pedometerData = [tuple first];
+        FITDistanceUnits distanceUnits = [[tuple last] unsignedIntegerValue];
+
+        return [@([@(pedometerData.numberOfMetersToday) fit_metersInDistanceUnits:distanceUnits]) stringValue];
+    }];
+
+    RAC(self.distanceCell.yesterdayValueLabel, text) = [stepsUpdateSignal map:^id(RACTuple *tuple) {
+        PedometerData *pedometerData = [tuple first];
+        FITDistanceUnits distanceUnits = [[tuple last] unsignedIntegerValue];
+
+        return [@([@(pedometerData.numberOfMetersYesterday) fit_metersInDistanceUnits:distanceUnits]) stringValue];
+    }];
+
+    // Bind Floors Cells
+    RAC(self.floorsCell.deltaValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [[@(pedometerData.numberOfFloorsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" floors", nil)];
+    }];
+
+    RAC(self.floorsCell.todayValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [@(pedometerData.numberOfAbsoluteFloorsToday) stringValue];
+    }];
+
+    RAC(self.floorsCell.yesterdayValueLabel, text) = [pedometerDataSignal map:^id(PedometerData *pedometerData) {
+        return [@(pedometerData.numberOfAbsoluteFloorsYesterday) stringValue];
+    }];
+
 }
 
 - (void)startPedometer
@@ -79,24 +141,7 @@
     __weak typeof (self) weakSelf = self;
     [self.pedometer startWithDidUpdateBlock:^(PedometerData *pedometerData) {
         __weak typeof (self) strongSelf = weakSelf;
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            DeltaTableViewCell *stepsCell = strongSelf.stepsCell;
-            stepsCell.deltaValueLabel.text = [[@(pedometerData.numberOfStepsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" steps", nil)];
-            stepsCell.todayValueLabel.text = [@(pedometerData.numberOfStepsToday) stringValue];
-            stepsCell.yesterdayValueLabel.text = [@(pedometerData.numberOfStepsYesterday) stringValue];
-
-            DeltaTableViewCell *distanceCell = strongSelf.distanceCell;
-            NSString *units = [NSString fit_unitsForDistanceType:self.settingsController.distanceType];
-            distanceCell.deltaValueLabel.text = [[@(pedometerData.numberOfMetersDelta) fit_deltaStringValue] stringByAppendingString:units];
-            distanceCell.todayValueLabel.text = [@(pedometerData.numberOfMetersToday) stringValue];
-            distanceCell.yesterdayValueLabel.text = [@(pedometerData.numberOfMetersYesterday) stringValue];
-
-
-            DeltaTableViewCell *floorsCell = strongSelf.floorsCell;
-            floorsCell.deltaValueLabel.text = [[@(pedometerData.numberOfFloorsDelta) fit_deltaStringValue] stringByAppendingString:NSLocalizedString(@" floors", nil)];
-            floorsCell.todayValueLabel.text = [@(pedometerData.numberOfAbsoluteFloorsToday) stringValue];
-            floorsCell.yesterdayValueLabel.text = [@(pedometerData.numberOfAbsoluteFloorsYesterday) stringValue];
-        }];
+        strongSelf.pedometerData = pedometerData;
     }];
 }
 

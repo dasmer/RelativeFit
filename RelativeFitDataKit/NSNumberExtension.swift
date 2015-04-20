@@ -11,12 +11,14 @@ public extension NSNumber {
     }
 
     public func fit_metersInDistanceUnits(units: FITDistanceUnits) -> Float {
+        var distance:Float
         switch units {
         case .Miles:
-            return self.floatValue * 0.000621371
+            distance = self.floatValue * 0.000621371
         case .Kilometers:
-            return self.floatValue * 0.001
+            distance = self.floatValue * 0.001
         }
+        return (round(100 * distance)/100)
     }
 
 }

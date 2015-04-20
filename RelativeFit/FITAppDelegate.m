@@ -13,6 +13,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[FITDeltaViewController alloc] init]];
     [UINavigationBar appearance].barTintColor = [UIColor fit_emeraldColor];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
